@@ -234,6 +234,9 @@ spec:
             - secretRef:
                 name: {{ include "rustfs.kmsSecretName" $ }}
             {{- end }}
+            {{- with .Values.extraEnvFrom }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
           resources:
             {{- toYaml $.Values.resources | nindent 12 }}
           {{- include "rustfs.probes" $ | nindent 10 }}
