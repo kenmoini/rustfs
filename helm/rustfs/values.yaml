@@ -262,6 +262,11 @@ extraEnv: []
 #   - name: RUSTFS_STORAGE_CLASS_STANDARD
 #     value: "EC:4"
 
+# Extra envFrom inclusions - instead of defining individual additional
+# environment variables with extraEnv you can include a whole ConfigMap
+# or Secret and all it's keys with the extraEnvFrom which maps to the
+# .spec.template.spec.containers[].envFrom specification
+extraEnvFrom: []
 
 extraVolumes: []
 extraVolumeMounts: []
