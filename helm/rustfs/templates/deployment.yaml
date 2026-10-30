@@ -89,7 +89,7 @@ spec:
             - -c
             - |
               {{- if $dataVolumeEnabled }}
-              mkdir -p /data
+              mkdir -p /data/.rustfs
               {{- end }}
               {{- if $logDirEnabled }}
               mkdir -p /mnt/rustfs/logs
