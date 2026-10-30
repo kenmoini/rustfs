@@ -175,7 +175,7 @@ spec:
                   mkdir -p /data/rustfs$i
                 done
               else
-                mkdir -p /data
+                mkdir -p /data/.rustfs
               fi
               {{- end }}
               {{- if $logDirEnabled }}
